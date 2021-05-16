@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'djoser',
     'webpack_loader',
     'rest_framework_simplejwt',
     'corsheaders',
@@ -56,9 +55,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.locale.LocaleMiddleware',
 ]
-
-APPEND_SLASH = False
-REMOVE_SLASH = True
 
 ROOT_URLCONF = 'core.urls'
 
@@ -126,24 +122,23 @@ REST_FRAMEWORK = {
         'rest_framework.renderers.JSONRenderer',
     ),
 }
-APPEND_SLASH = False
 
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': datetime.timedelta(days=30),
-    'REFRESH_TOKEN_LIFETIME': datetime.timedelta(days=45),
+    'ACCESS_TOKEN_LIFETIME': datetime.timedelta(days=7),
+    'REFRESH_TOKEN_LIFETIME': datetime.timedelta(days=30),
 }
 
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:8080',
 ]
 
-DJOSER = {
-    'SERIALIZERS': {
-        'current_user': 'user.serializers.UserSerializer',
-        'user_create': 'user.serializers.UserCreateSerializer',
-    },
-    'LOGIN_FIELD': 'username'
-}
+# DJOSER = {
+#     'SERIALIZERS': {
+#         'current_user': 'user.serializers.UserSerializer',
+#         'user_create': 'user.serializers.UserCreateSerializer',
+#     },
+#     'LOGIN_FIELD': 'username'
+# }
 
 AUTH_USER_MODEL = 'user.User'
 

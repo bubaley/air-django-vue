@@ -6,7 +6,7 @@
             :to="{name: 'userItem', params: {userId: el.id}}">
             <v-row no-gutters align="center">
                 <div>{{ el.id }}.</div>
-                <div class="ml-3">{{ el.username }}</div>
+                <div class="ml-3">{{ el.email }}</div>
             </v-row>
         </router-link>
     </v-col>

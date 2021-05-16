@@ -9,9 +9,8 @@
 export default {
     name: 'App',
 
-    components: {
-
-    },
+    components: {},
+    methods: {},
 
     data: () => ({
         //
@@ -21,3 +20,7 @@ export default {
     }
 };
 </script>
+
+<style>
+
+</style>

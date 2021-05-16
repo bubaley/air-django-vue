@@ -1,4 +1,8 @@
-$text-field-outlined-fieldset-border: 1px solid;
+$text-field-outlined-fieldset-border: 2px solid;
 a {
   text-decoration: none;
+}
+
+body, .v-application {
+  font-family: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif !important;
 }

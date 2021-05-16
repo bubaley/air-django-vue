@@ -4,11 +4,11 @@ m.url = 'users'
 m.routes = [
     {
         name: 'list',
-        component: require('../views/user/UserList')
+        component: require('../main/views/user/UserList')
     },
     {
         name: 'item',
-        component: require('../views/user/UserItem'),
+        component: require('../main/views/user/UserItem'),
         single: true
     }
 ]

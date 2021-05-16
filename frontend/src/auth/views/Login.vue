@@ -4,12 +4,12 @@
             <v-card class="pa-3">
                 <div class="title font-weight-bold">Авторизация</div>
                 <v-text-field dense hide-details outlined class="mt-5" label="Логин"
-                              v-model="username"></v-text-field>
+                              v-model="email"></v-text-field>
                 <v-text-field @keyup.enter="login" dense hide-details outlined class="mt-5" label="Пароль"
                               type="password"
                               v-model="password"></v-text-field>
                 <v-row align="center" class="pa-3 mt-2">
-                    <v-btn :disabled="!username || !password" depressed class="text-none px-7" color="primary"
+                    <v-btn :disabled="!email || !password" depressed class="text-none px-7" color="primary"
                            :loading="loading" @click="login">Войти
                     </v-btn>
                     <v-spacer></v-spacer>
@@ -25,7 +25,7 @@
 export default {
     name: "Login",
     data: () => ({
-        username: '',
+        email: '',
         password: '',
         loading: false,
     }),
@@ -33,7 +33,7 @@ export default {
         login() {
             this.loading = true
             this.$auth.login({
-                username: this.username,
+                email: this.email,
                 password: this.password
             }).then(() => {
                 this.loading = false
